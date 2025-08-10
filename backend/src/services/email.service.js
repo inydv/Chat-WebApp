@@ -1,4 +1,7 @@
+const dotenv = require("dotenv");
 const nodemailer = require("nodemailer");
+
+dotenv.config();
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -22,7 +25,7 @@ const sendOtpToEmail = async (email, otp) => {
 
             <p>Your one-time password (OTP) to verify your whatsApp web account is:</p>
 
-            <h1 style="background: #e0f7fa; color: #000; padding: 10px 20px; display: inline-block; border-radius: 5px; letter-spacing: 2;">
+            <h1 style="background: #e0f7fa; color: #000; padding: 10px 20px; display: inline-block; border-radius: 5px; letter-spacing: 2px;">
             ${otp}
             </h1>
 

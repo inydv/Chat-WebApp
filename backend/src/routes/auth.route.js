@@ -12,7 +12,7 @@ router.put(
   "/update-profile",
   authMiddleware,
   multerMiddleware,
-  authController.verifyOtp
+  authController.updateProfile
 );
 router.get("/check-auth", authMiddleware, authController.checkAuthenticated);
 router.get("/users", authMiddleware, authController.getAllUsers);
